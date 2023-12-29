@@ -2,3 +2,6 @@
 git add .
 git commit -m "$1"
 git push
+cd ./../publi_html/cad2023
+git pull
+
