@@ -287,9 +287,11 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <h1>W12</h1>
 <h2>網路設定</h2>
-<p>使用ssh來架設網站,cd cad2023之後打python3 server.py來開啟s1511網站.</p>
-<p><span>以管理者身分執行cad2023_network_setup批次檔案, 關閉 IPv4 網路協定,並開啟IPv6 網路.</span></p>
-<h2>零組件繪圖</h2>
+<p><span>以<strong>管理者身分</strong>執行cad2023_network_setup批次檔案, 關閉 IPv4 網路協定,並開啟IPv6 網路.</span></p>
+<p><span>1_disable_ipv4.ps1:只啟動 IPv6 網路協定.</span></p>
+<div class="line number1 index0 alt2"><code class="js preprocessor"># 關閉 IPv4 網路</code></div>
+<div class="line number2 index1 alt1"><code class="js plain">Disable-NetAdapterBinding -Name </code><code class="js string">"*"</code> <code class="js plain">-ComponentID ms_tcpip</code></div>
+<div class="line number2 index1 alt1"><code class="js plain"># 啟用 IPv6 網路<br/>Enable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6</code></div><h2>零組件繪圖</h2>
 <h2>系統模擬</h2>
 <h1>專案一零組件繪圖</h1>
 <h2>繪圖檔案</h2>
@@ -305,8 +307,14 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p><img alt="" height="430" src="/images/cmsite - Google Chrome 2023_12_29 下午 03_41_21.png" width="800"/></p>
 <p>4.到repit,git--&gt;push</p>
 <p><img alt="" height="551" src="/images/cmsite - Google Chrome 2023_12_29 下午 03_51_25.png" width="721"/></p>
+<p>5.到github倉儲確認更新</p>
 <p></p><h2>s1511</h2>
-<h2>localhost</h2>
+<p>開啟/更新網站步驟:</p>
+<p>1.使用隨身碟中的ssh批次檔,來自架<span>s1511.cycu.org網站+埠號</span></p>
+<p><span>2.cd(切換目錄)cad2023,打python3 server.py來開啟自架的網站,其中server.py中的埠號要改成自己的.</span></p>
+<p><span>3.到google輸入https://s1511.cycu.org:(埠號).</span></p>
+<p><span>4.如要更新網站,convert轉成靜態,用acp打訊息等待github轉換更新網站.</span></p>
+<p></p><h2>localhost</h2>
 <h1>exam</h1>
 <h2>step1</h2>
 <p></p>
